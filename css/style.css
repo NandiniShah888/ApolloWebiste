@@ -349,13 +349,12 @@ footer .footer-links a:hover {
 #prevButton,
 #nextButton {
   position: absolute;
-  top: 3rem;
+  top: 15%;
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
   font-size: 24px;
   color: #942020;
-  /* z-index: 1000; */
   padding: 5px 2px;
   height: 40px;
   outline: none;
@@ -367,14 +366,34 @@ footer .footer-links a:hover {
   box-shadow: none !important;
 }
 
-#prevButton {
-  left: 380px;
-  bottom: 20px;
+@media screen and (max-width: 768px) {
+  #prevButton {
+    left: 10px;
+  }
+
+  #nextButton {
+    right: 10px;
+  }
 }
 
-#nextButton {
-  right: 380px;
-  bottom: 20px;
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  #prevButton {
+    left: 20%;
+  }
+
+  #nextButton {
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  #prevButton {
+    left: calc(50% - 200px); /* Adjust as needed */
+  }
+
+  #nextButton {
+    right: calc(50% - 200px); /* Adjust as needed */
+  }
 }
 
 #prevButton:hover,
